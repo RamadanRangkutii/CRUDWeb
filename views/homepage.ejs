@@ -1,0 +1,21 @@
+<%- include('templates/header')-%>
+<br>
+<h1 class="text-center">Selamat Datang Di TauKow</h1> 
+<br>   
+<% news.forEach(function(item){%>
+<div class="flex-column">
+  <div class="card row" style="width: 20rem; ">
+    <img src="..\images\<%= item.image %>" class="card-img-top" alt="imageku">
+    <div class="card-body">
+      <h5 class="card-title"><%= item.title %></h5>
+      <p class="card-text"><%= item.content %></p>
+      <a href="/detailnews/<%= item.id %>" class="btn btn-outline-info">ReadMore</a>
+    </div>
+  </div>
+  
+</div>
+  <br>
+  <%});%>
+
+
+<%- include('templates/footer')-%>

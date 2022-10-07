@@ -1,0 +1,20 @@
+<%- include('templates/header')-%>
+
+<div class="card" style="width: 50rem;">
+    <img src="..\images\<%=news.image%>" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h1 class="card-text"><%= news.title %> </h1>
+      </div>
+    <div class="card-body">
+      <p class="card-text"><%= news.content %> ></p>
+    </div>
+  </div>
+  <br>
+  <div class="text-center">
+    <a href="/" class ="btn btn-primary">Back</a> &nbsp; 
+    <a href="/updatenews/<%= news.id %>" class ="btn btn-warning">Update</a> &nbsp; 
+    <a href="/deletenews/<%= news.id %>" class ="btn btn-danger">Delete</a> &nbsp; 
+    <br>
+</div>
+
+<%- include('templates/footer')-%>

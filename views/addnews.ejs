@@ -1,0 +1,22 @@
+<%- include('templates/header')-%>
+<form method="POST" action="/addnews" enctype="multipart/form-data">
+  <div>
+      <h1><%= title %></h1>
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Judul Berita</label>
+    <input type="text" class="form-control" id="title" name="title" placeholder="Judul">
+  </div>
+  <div class="mb-3">
+      <label for="image" class="form-label">Gambar</label>
+      <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control" id="image" name="image" placeholder="gambar">
+  </div>
+  <div class="mb-3">
+      <label for="content" class="form-label">Content</label>
+      <textarea class="form-control" id="content" name="content" placeholder="content"></textarea>
+  </div>
+  <a href="/" class ="btn btn-outline-info">Home Screen</a> &nbsp; 
+  <button type="submit" class="btn btn-primary">Posting</button>
+</form>
+
+<%- include('templates/footer')-%>
